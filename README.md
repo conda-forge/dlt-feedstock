@@ -144,5 +144,6 @@ Feedstock Maintainers
 =====================
 
 * [@rudolfix](https://github.com/rudolfix/)
+* [@rxm7706](https://github.com/rxm7706/)
 * [@sultaniman](https://github.com/sultaniman/)
 
