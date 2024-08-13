@@ -1,5 +1,5 @@
 {% set name = "dlt" %}
-{% set version = "0.4.12" %}
+{% set version = "0.5.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dlt-{{ version }}.tar.gz
-  sha256: 0242581e3fd6ea81b9a676f8011018775c6a2985f76bd7474ab2cf98869e03ee
+  sha256: 7c30605edaaef4d35b13f364b34da1c5fde04216ca0e43c392c870e9ac298610
 
 build:
   entry_points:
