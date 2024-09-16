@@ -1,5 +1,5 @@
 {% set name = "dlt" %}
-{% set version = "0.4.12" %}
+{% set version = "0.5.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,9 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dlt-{{ version }}.tar.gz
-  sha256: 0242581e3fd6ea81b9a676f8011018775c6a2985f76bd7474ab2cf98869e03ee
+  sha256: 6254c56421765fb1b1b81a7c68fa0221709b67654488c31595b7f98254327ac2
 
 build:
+  noarch: python
   entry_points:
     - dlt = dlt.cli._dlt:_main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -17,11 +18,11 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.8.1,<3.13
     - poetry-core >=1.0.8
     - pip
   run:
-    - python
+    - python >=3.8.1,<3.13
     - requests >=2.26.0
     - pendulum >=2.1.2
     - simplejson >=3.17.5
@@ -31,7 +32,6 @@ requirements:
     - python-tzdata >=2022.1
     - tomlkit >=0.11.3
     - pathvalidate >=2.5.2
-    - sqlalchemy >=1.4.0
     - typing-extensions >=4.0.0
     - makefun >=1.15.0
     - click >=7.1
@@ -42,12 +42,16 @@ requirements:
     - gitpython >=3.1.29
     - pytz >=2022.6
     - giturlparse >=0.10.0
-    - orjson >=3.6.7,<=3.9.10
+    - orjson >=3.6.7,<4,!=3.9.11,!=3.9.12,!=3.9.13,!=3.9.14,!=3.10.1
     - tenacity >=8.0.2
     - jsonpath-ng >=1.5.3
     - fsspec >=2022.4.0
     - packaging >=21.1
     - win-precise-time >=1.4.2  # [win]
+    # Keep the package noarch but allow for the win only dep
+    - __linux  # [linux]
+    - __osx    # [osx]
+    - __win    # [win]
 
 test:
   imports:
@@ -67,4 +71,5 @@ about:
 extra:
   recipe-maintainers:
     - rudolfix
+    - rxm7706
     - sultaniman
