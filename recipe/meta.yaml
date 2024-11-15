@@ -1,5 +1,5 @@
 {% set name = "dlt" %}
-{% set version = "1.3.0" %}
+{% set version = "1.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/dlt-{{ version }}.tar.gz
-  sha256: 57eecee99ace25b6d37027a78f59f8c735d1913cc81f1101e1b47bf96fc544b8
+  sha256: 75208448dc11dd501cf15d76742368816fef8e1b22fb07417f69d5ceb720b324
 
 build:
   noarch: python
@@ -22,6 +22,7 @@ requirements:
     - poetry-core >=1.0.8
     - pip
   run:
+    - aiohttp >=3.9
     - graphlib-backport
     - pluggy >=1.3.0
     - typing_extensions >=4.0.0
