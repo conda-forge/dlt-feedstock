@@ -1,5 +1,5 @@
 {% set name = "dlt" %}
-{% set version = "1.4.0" %}
+{% set version = "1.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/dlt-{{ version }}.tar.gz
-  sha256: 75208448dc11dd501cf15d76742368816fef8e1b22fb07417f69d5ceb720b324
+  sha256: 73e797e8d1c220caa80d464aebdd23c300b1c8385fbb605df04167fc513f8670
 
 build:
   noarch: python
   entry_points:
     - dlt = dlt.cli._dlt:_main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
