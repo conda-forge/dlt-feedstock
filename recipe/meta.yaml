@@ -1,5 +1,5 @@
 {% set name = "dlt" %}
-{% set version = "1.4.1" %}
+{% set version = "1.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/dlt-{{ version }}.tar.gz
-  sha256: 73e797e8d1c220caa80d464aebdd23c300b1c8385fbb605df04167fc513f8670
+  sha256: 2ece1c96242699630793681f0e3b9ec8bd41c79db3de20266cde427a71869b61
 
 build:
   noarch: python
@@ -33,7 +33,7 @@ requirements:
     - pendulum >=2.1.2
     - simplejson >=3.17.5
     - pyyaml >=5.4.1
-    - semver >=2.13.0
+    - semver >=3.0.0
     - hexbytes >=0.2.2
     - python-tzdata >=2022.1
     - tomlkit >=0.11.3
