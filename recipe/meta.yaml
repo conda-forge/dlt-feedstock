@@ -1,5 +1,5 @@
 {% set name = "dlt" %}
-{% set version = "1.6.0" %}
+{% set version = "1.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/dlt-{{ version }}.tar.gz
-  sha256: 07609bf4d4a9853f1162e88740e4eecabede76cf7af81408093f0b70152e519f
+  sha256: 4b924c5793c003568a596d60211dc7d1b6c1589e61ccefe55b271f7ffc47519f
 
 build:
   noarch: python
