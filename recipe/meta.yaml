@@ -24,8 +24,8 @@ requirements:
   run:
     - databricks-sql-connector >=3.6.0
     - dlt-pendulum >=3.0.2
-    - pyarrow >=12.0.0,<18
-    - pywin32-on-windows >=306
+    - pyarrow >=12.0.0
+    - pywin32 >=306
     - rich-argparse >=1.6.0,<2.0.0
     - python >={{ python_min }}
     - aiohttp >=3.9
