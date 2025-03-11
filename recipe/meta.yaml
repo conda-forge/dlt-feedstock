@@ -1,5 +1,5 @@
 {% set name = "dlt" %}
-{% set version = "1.8.0" %}
+{% set version = "1.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/dlt-{{ version }}.tar.gz
-  sha256: 4b924c5793c003568a596d60211dc7d1b6c1589e61ccefe55b271f7ffc47519f
+  sha256: 6ff9c56d7ea416cd01bce874348023042a441d6f83b35495d234efd709d9fd77
 
 build:
   noarch: python
@@ -22,9 +22,10 @@ requirements:
     - poetry-core >=1.0.8
     - pip
   run:
+    - pywin32-on-windows >=306
     - databricks-sql-connector >=3.6.0
     - dlt-pendulum >=3.0.2
-    - pyarrow >=12.0.0
+    - pyarrow >=12.0.0,<18
     - pywin32 >=306
     - rich-argparse >=1.6.0,<2.0.0
     - python >={{ python_min }}
