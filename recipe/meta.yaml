@@ -22,11 +22,12 @@ requirements:
     - poetry-core >=1.0.8
     - pip
   run:
-    - pywin32-on-windows >=306
+    #- pywin32-on-windows >=306 # pywin32-on-windows >=306 * does not exist (perhaps a typo or a missing channel).
+    - pywin32 >=306
     - sqlglot >=23.0.0
     - databricks-sql-connector >=3.6.0
     - dlt-pendulum >=3.0.2
-    - pyarrow >=12.0.0,<18
+    - pyarrow >=12.0.0
     - pywin32 >=306
     - rich-argparse >=1.6.0,<2.0.0
     - python >={{ python_min }}
