@@ -38,8 +38,7 @@ requirements:
     - pyyaml >=5.4.1
     - semver >=3.0.0
     - hexbytes >=0.2.2
-    #- tzdata >=2022.1
-    # conda-forge tzdata seems to be something else: https://github.com/conda-forge/agate-feedstock/pull/23/files#r1564825772:
+    #- tzdata >=2022.1  # conda-forge tzdata seems to be something else: https://github.com/conda-forge/agate-feedstock/pull/23/files#r1564825772:
     - python-tzdata >=2022.1
     - tomlkit >=0.11.3
     - pathvalidate >=2.5.2
@@ -58,15 +57,13 @@ requirements:
     - fsspec >=2022.4.0
     - packaging >=21.1
     - pluggy >=1.3.0
-    #- win-precise-time >=1.4.2
     - ${{ "win-precise-time >=1.4.2" if win }}
     - sqlglot >=23.0.0
-    #- pyarrow >=12.0.0,<18
-    # pyarrow is an optional dependency https://github.com/dlt-hub/dlt/blob/1.10.0/pyproject.toml#L71
-    #- databricks-sql-connector >=3.6.0
-    # databricks-sql-connector is an optional dependency https://github.com/dlt-hub/dlt/blob/1.10.0/pyproject.toml#L94
+    #- pyarrow >=12.0.0,<18  # pyarrow is an optional dependency https://github.com/dlt-hub/dlt/blob/1.10.0/pyproject.toml#L71
+    #- databricks-sql-connector >=3.6.0  # databricks-sql-connector is an optional dependency https://github.com/dlt-hub/dlt/blob/1.10.0/pyproject.toml#L94
     - rich-argparse >=1.6.0,<2.0.0
-    - ${{ "pywin32-on-windows >=306" if win }}
+    #- pywin32-on-windows >=306  # pywin32-on-windows >=306 * does not exist (perhaps a typo or a missing channel).
+    - ${{ "pywin32 >=306" if win }}
 
 tests:
   - python:
