@@ -1,5 +1,5 @@
 {% set name = "dlt" %}
-{% set version = "1.9.0" %}
+{% set version = "1.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/dlt-{{ version }}.tar.gz
-  sha256: d274e9de1e993a2cf21862c9c34a457fa4ba3794e9be379d8f5a7530fbc709e9
+  sha256: 651a053818ad0c9978d8579a4e639c7d8705a68e9e89890e787010a682f14f46
 
 build:
   noarch: python
@@ -23,11 +23,12 @@ requirements:
     - pip
   run:
     #- pywin32-on-windows >=306 # pywin32-on-windows >=306 * does not exist (perhaps a typo or a missing channel).
+    - pywin32-on-windows >=306
     - pywin32 >=306
     - sqlglot >=23.0.0
     - databricks-sql-connector >=3.6.0
     - dlt-pendulum >=3.0.2
-    - pyarrow >=12.0.0
+    - pyarrow >=12.0.0,<18
     - pywin32 >=306
     - rich-argparse >=1.6.0,<2.0.0
     - python >={{ python_min }}
