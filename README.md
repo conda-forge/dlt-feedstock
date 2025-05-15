@@ -3,11 +3,15 @@ About dlt-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dlt-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/dlt-hub/dlt
+Home: https://dlthub.com/docs
 
 Package license: Apache-2.0
 
-Summary: dlt is an open-source python-first scalable data loading library that makes data loading easy
+Summary: dlt is an open-source python-first scalable data loading library that does not require any backend to run.
+
+Development: https://github.com/dlt-hub
+
+data load tool (dlt) is an open source Python library that makes data loading easy.
 
 Current build status
 ====================
