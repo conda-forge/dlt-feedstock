@@ -3,8 +3,8 @@ schema_version: 1
 
 context:
   name: dlt
-  version: "1.17.1"
-  python_min: '3.9'
+  version: "1.18.0"
+  python_min: '3.10'
   python_max: '4.0'
   python_test_max: '3.13'
 
@@ -14,7 +14,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/dlt-${{ version }}.tar.gz
-  sha256: 7ed958f8fdb180877393e1dfa3d208892a47cdcc917e27e5dd1dacf81d8b475a
+  sha256: c01b24e48bf5d108d7d2e5bc89f26a32eaa25621a8690317ff59253ccc96cadd
 
 build:
   number: 0
@@ -22,7 +22,7 @@ build:
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
     entry_points:
-      - dlt = dlt.cli._dlt:_main
+      - dlt = dlt._workspace.cli._dlt:_main
 
 requirements:
   host:
@@ -54,14 +54,14 @@ requirements:
     - orjson >=3.6.7,<4,!=3.9.11,!=3.9.12,!=3.9.13,!=3.9.14,!=3.10.1
     - tenacity >=8.0.2
     - jsonpath-ng >=1.5.3
-    - fsspec >=2022.4.0
+    - fsspec >=2025.9.0
     - packaging >=21.1
     - pluggy >=1.3.0
     - ${{ "win-precise-time >=1.4.2" if win }}
     - sqlglot >=25.4.0
     #- pyarrow >=12.0.0,<18  # pyarrow is an optional dependency https://github.com/dlt-hub/dlt/blob/1.10.0/pyproject.toml#L71
     #- databricks-sql-connector >=3.6.0  # databricks-sql-connector is an optional dependency https://github.com/dlt-hub/dlt/blob/1.10.0/pyproject.toml#L94
-    - rich-argparse >=1.6.0,<2.0.0
+    - rich-argparse >=1.6.0
     #- pywin32-on-windows >=306  # pywin32-on-windows >=306 * does not exist (perhaps a typo or a missing channel).
     - ${{ "pywin32 >=306" if win }}
 
