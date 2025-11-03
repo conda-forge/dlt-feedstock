@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: dlt
-  version: "1.18.1"
+  version: "1.18.2"
   python_min: '3.10'
   python_max: '4.0'
   python_test_max: '3.13'
@@ -14,7 +14,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/dlt-${{ version }}.tar.gz
-  sha256: fc05e66fcbc73525a7dbe20a8310849a8c7a703bcda1b7379fbdf26af780dbc0
+  sha256: e1b199202cb254cf8a862317c79eecaab9ff8c946ea174c16f06192210481707
 
 build:
   number: 0
