@@ -17,7 +17,7 @@ source:
   sha256: 134787296137f0b52213bb0a72e70bac4125a7c191d2a043ba0a572a74cdf13b
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
@@ -58,7 +58,7 @@ requirements:
     - packaging >=21.1
     - pluggy >=1.3.0
     - ${{ "win-precise-time >=1.4.2" if win }}
-    - sqlglot >=25.4.0
+    - sqlglot >=25.4.0,!=28.1
     #- pyarrow >=12.0.0,<18  # pyarrow is an optional dependency https://github.com/dlt-hub/dlt/blob/1.10.0/pyproject.toml#L71
     #- databricks-sql-connector >=3.6.0  # databricks-sql-connector is an optional dependency https://github.com/dlt-hub/dlt/blob/1.10.0/pyproject.toml#L94
     - rich-argparse >=1.6.0
