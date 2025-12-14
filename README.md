@@ -151,6 +151,3 @@ Feedstock Maintainers
 * [@rxm7706](https://github.com/rxm7706/)
 * [@sultaniman](https://github.com/sultaniman/)
 
-
-<!-- dummy commit to enable rerendering -->
-
