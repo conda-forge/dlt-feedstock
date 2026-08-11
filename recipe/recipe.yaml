@@ -23,6 +23,7 @@ build:
   python:
     entry_points:
       - dlt = dlt._workspace.cli._dlt:_main
+      - dlthub = dlt._workspace.cli._dlt:_main_dlthub
 
 requirements:
   host:
