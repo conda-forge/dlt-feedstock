@@ -4,9 +4,7 @@ schema_version: 1
 context:
   name: dlt
   version: "1.29.1"
-  python_min: '3.10'
-  python_max: '3.14'
-  python_test_max: '3.13'
+  python_max: '3.15'
 
 package:
   name: ${{ name|lower }}
@@ -105,12 +103,8 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - ${{ python_test_max }}.*
-  - requirements:
-      run:
-        - pip
-        - python ${{ python_min }}.*
-    script:
+        - "*"
+  - script:
       - dlt --help
       - dlthub --help
 
